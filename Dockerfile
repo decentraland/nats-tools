@@ -7,7 +7,7 @@ RUN apk add -U --no-cache git binutils
 RUN go install github.com/nats-io/nats-top@main
 RUN go install github.com/nats-io/natscli/nats@latest
 
-FROM alpine:3.14.6
+FROM alpine:latest
 
 RUN apk add -U --no-cache ca-certificates figlet vim curl
 
