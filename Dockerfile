@@ -9,7 +9,7 @@ RUN go install github.com/nats-io/natscli/nats@latest
 
 FROM alpine:latest
 
-RUN apk add -U --no-cache ca-certificates figlet vim curl
+RUN apk add -U --no-cache ca-certificates figlet vim curl httpie jq
 
 COPY --from=builder /go/bin/* /usr/local/bin/
 
